@@ -30,7 +30,8 @@ public class Main {
 		
 		EntityManagerFactory emf=null;
 		EntityManager em=null;
-//		Logger log = Logger.getLogger("Main");
+		
+		Logger log = Logger.getLogger("Main");
 		
 		try
 		{
@@ -51,7 +52,7 @@ public class Main {
 				System.out.printf("%-30s %-10s %-30s\n", item.getNombre(), item.getDocumentoIdentidad(), item.getCorreoElectronico());
 			}
 			
-//			log.info("FIN\n");			
+			log.info("FIN");			
 		}
 		catch(Exception ex)
 		{
@@ -80,6 +81,7 @@ public class Main {
 			tPersona.setCorreoElectronico("pepe@gmail.com");
 			tPersona.setFechaNacimiento("2014/01/01");
 			tPersona.setEstado(true);
+			
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			String fechaRegistro = sdf.format(new Date());
 			tPersona.setFechaRegistro(fechaRegistro);
@@ -215,6 +217,8 @@ public class Main {
 		EntityManager em=emf.createEntityManager();
 //		EntityTransaction et=em.getTransaction();
 		
+		Logger log = Logger.getLogger("Main");
+		
 		try
 		{
 //			et.begin();
@@ -233,6 +237,8 @@ public class Main {
 //				System.out.println(item.getNombre()+"......."+item.getCorreoElectronico());
 				System.out.printf("%-30s %-10s %-30s\n", item.getNombre(), item.getDocumentoIdentidad(), item.getCorreoElectronico());
 			}
+			
+			log.info("FIN");	
 		}
 		catch(Exception ex)
 		{
